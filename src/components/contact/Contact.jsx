@@ -21,17 +21,23 @@ export default function Contact() {
                 <div className="gridRow">
                     <div className="downloadGrid">
                         <h3>CV</h3>
-                        <img className="large" title="Download my CV" src="assets/cv.png" alt="" />
+                        <a href="assets/CV.docx" download>
+                            <img className="large" title="Download my CV" src="assets/cv.png" alt="" />
+                        </a>
                     </div>
                 </div>
                 <div className="gridRow">
                     <div className="downloadGrid">
                         <h3>Personal Letter</h3>
-                        <img title="Download my personal letter" src="assets/letter.png" alt="" />
+                        <a href="assets/Personal Letter.docx" download>
+                            <img title="Download my personal letter" src="assets/letter.png" alt="" />
+                        </a>
                     </div>
                     <div className="downloadGrid">
                         <h3>References</h3>
-                        <img title="Download my references" src="assets/references.png" alt="" />
+                        <a href="assets/References.docx" download>
+                            <img title="Download my references" src="assets/references.png" alt="" />
+                        </a>    
                     </div>
                 </div>
             </div>
