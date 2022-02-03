@@ -1,0 +1,170 @@
+@import "../../global.scss";
+
+.contact{
+    background-color: white;
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .left {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            img {
+                height: 80%;
+            }
+        }
+    }
+
+    .center {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            flex-direction: row;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 120px;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .gridRow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 30px;
+            justify-content: space-around;
+
+            img {
+                height: 100px;
+                cursor: pointer;
+                display: block;
+                margin:  auto;
+
+                @include mobile {
+                    height: 80px;
+                }
+
+                &.large {
+                    height: 160px;
+
+                    @include mobile {
+                        height: 80px;
+                    }
+                }
+            }
+
+            h3 {
+                text-align: center;
+                margin-bottom: 5px;
+                text-decoration: underline;
+            }
+
+            .downloadGrid {
+                padding: 15px;
+            }
+        }
+        
+    }
+
+    .right {
+        flex: 1;
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 30px;
+
+            @include mobile {
+                font-size: 20px;
+                margin: 3px;
+            }
+        }
+
+        p {
+            font-weight: 300;
+            margin-bottom: 50px;
+            text-align: center;
+            width: 350px;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        form {
+            width: 80%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            input {
+                width: 300px;
+                height: 30px;
+                font-style: 14px;
+                margin-bottom: 15px;
+
+                @include mobile {
+                    width: 200px;
+                    height: 20px;
+                }
+            }
+
+            textarea {
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+                margin-bottom: 15px;
+
+                @include mobile {
+                    width: 200px;
+                    height: 100px;
+                }
+            }
+
+            button {
+                width: 150px;
+                height: 30px;
+                color: whitesmoke;
+                background-color: crimson;
+                border: none;
+                border-radius: 10px;
+                font-weight: 500;
+                cursor: pointer;
+                margin-bottom: 15px;
+                
+                &.focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color:rgb(235, 81, 112);
+                }
+            }
+            span {
+                color: green;
+            } 
+        }
+        
+    }
+}

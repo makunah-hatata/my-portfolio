@@ -1,0 +1,145 @@
+@import "../../global.scss";
+
+.works {
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .arrow {
+        height: 50px;
+        position: absolute;
+        filter: invert(100%);
+        cursor: pointer;
+
+        @include mobile {
+            display: none;
+        }
+
+        &.left {
+            left: 100px;
+            transform: rotate(180deg);
+        }
+
+        &.right {
+            right: 100px;
+        }
+    }
+
+    .slider {
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+
+        @include mobile {
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .item {
+                width: 700px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile {
+                    width: 80%;
+                    height: 180px;
+                    margin: 12px 0;
+                }
+
+                // Splitting up the flexbox in 4,8 intervals.
+                .left {
+                    flex: 4;
+                    height: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .leftContainer {
+                        width:90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        @include mobile {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .imgContainer {
+                            width: 220px;
+                            height: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            @include mobile {
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+
+                                @include mobile {
+                                    display: none;
+                                }
+
+                            }
+                        }
+
+                        h2 {
+                            font-size: 30px;
+                            z-index: 2;
+                            text-align: center;
+                            font-weight: 500;
+
+                            @include mobile {
+                                font-size: 13px;
+                            }
+
+                        }
+
+                        p {
+                            font-size: 13px;
+                            text-align: center;
+                            font-weight: 300;
+
+                            @include mobile {
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    height: 100%;
+                    flex: 8;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+
+                    img {
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
